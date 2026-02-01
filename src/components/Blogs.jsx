@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import axios from "axios"
 import Footer from './common/Footer';
 import auth from '../config/firebase';
@@ -51,7 +50,7 @@ function Blogs() {
         const date = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
         const likes = 0;
 
-        axios.post("http://localhost:5000/api/blogs", { newTitle, date, newContent, likes }).then((res) => {
+        axios.post("http://localhost:5000/api/blogs", { newTitle, date, newContent, likes }).then(() => {
             axios.get("http://localhost:5000/api/blogs").then((res) => {
                 setBlogs(res.data)
             }).catch(() => {
@@ -67,7 +66,6 @@ function Blogs() {
         <div className="blog-section py-14">
             <h2 className="text-center text-5xl font-bold mb-14">Latest  <span className='text-orange-400'>Blogs</span> 📚</h2>
 
-            {/* Blog creation form (only admin can see) */}
             {isAdmin && (
                 <div className="blog-creation-form mb-8" style={{ width: "80%", margin: "auto" }}>
                     <form onSubmit={handleNewBlogSubmit} className="flex flex-col gap-4">

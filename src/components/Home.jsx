@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './common/Navbar'
 import BlogProfileImage from "../assets/Blog Website Design.jpg"
 import CSS from "../assets/css-3.png"
 import HTML from "../assets/html.png"
@@ -18,22 +17,18 @@ function Home() {
     const navigate = useNavigate()
     return (
         <div>
-
             <div className='flex items-center justify-center'>
                 <div className="w-full sm:w-1/2 flex-col justify-center">
                     <h2 className='text-3xl md:text-6xl font-bold pb-2'>Hy! I Am</h2>
                     <h2 className='text-4xl md:text-7xl font-bold text-orange-400 py-2'>Jacky Thomas</h2>
-                    <img src={BlogProfileImage} className='w-60 block sm:hidden' alt="Blog Profile Image" />
+                    <img src={BlogProfileImage} className='w-60 block sm:hidden' alt="" />
                     <p className='py-2'>I can create stunning website for your company, Do check my works. I won't disappoint you. Try me for 7 Days before you decide anything.</p>
                     <button className='button-style mt-2'>Hire Me</button>
                 </div>
                 <div className='justify-center hidden sm:block'>
-                    <img src={BlogProfileImage} className='w-60 md:w-96 ' alt="Blog Profile Image" />
-
+                    <img src={BlogProfileImage} className='w-60 md:w-96 ' alt="" />
                 </div>
-
             </div>
-
 
             <div className='flex justify-evenly py-6'>
                 <img src={HTML} style={{ width: "50px" }} alt="" />
@@ -52,7 +47,6 @@ function Home() {
                     </div>
                     <div className='mt-4 border-[6px] rounded-lg border-green-500 p-5 border-t-0 w-60 flex-col items-center'>
                         <div className='rounded-full border-2 p-5 font-bold text-white text-center bg-gradient-to-br from-green-200 to-green-600'>6</div>
-
                         <p className='text-center font-medium'>Months of Experience</p>
                     </div>
                 </div>
@@ -62,48 +56,31 @@ function Home() {
                     <h2 className='text-3xl sm:text-7xl font-bold text-orange-400'>Services</h2>
                     <p className='my-2'>I have attahed my Resume here for your Reference</p>
                     <button className='button-style mt-2'>Download CV</button>
-
                 </div>
-
-
-
-
             </div>
 
             <div>
                 <h2 className='text-center text-5xl my-14 font-bold'>Checkout My Live <span className='text-orange-400'>Projects</span> Here</h2>
                 <div className='flex justify-around my-5 flex-col sm:flex-row'>
-
                     <img src={P1} className='w-64 border rounded-md cursor-pointer' alt="" />
-
                     <img src={P2} className='w-64 border rounded-md cursor-pointer' alt="" />
-
                     <img src={P3} className='w-64 border rounded-md cursor-pointer' alt="" />
-
                 </div>
             </div>
 
-
             <div className='flex items-center justify-center my-14'>
                 <div className='justify-center hidden sm:block'>
-                    <img src={BlogImage} className='w-60 md:w-96 ' alt="Blog Profile Image" />
-
+                    <img src={BlogImage} className='w-60 md:w-96 ' alt="" />
                 </div>
                 <div className="w-full sm:w-1/2 flex-col justify-center ml-6">
                     <h2 className='text-3xl md:text-6xl font-bold pb-2'>I like to Write</h2>
                     <h2 className='text-4xl md:text-7xl font-bold text-orange-400 py-2'>Blogs about tech</h2>
-
                     <p className='py-2'>You can know better about me by reading my blogs here. I share my expertise here.</p>
                     <button className='button-style mt-2' onClick={() => navigate("/blogs")}>Read My Blogs</button>
                 </div>
-
-
             </div>
 
-
             <Footer/>
-
-
         </div>
     )
 }
